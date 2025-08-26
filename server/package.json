@@ -3,17 +3,15 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon src/index.ts",
-    "build": "rimraf dist && tsc",
-    "ts.check": "tsc --project tsconfig.json",
-    "add-build": "git add dist",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "dev": "nodemon",
+    "test:db": "tsx src/test-db.ts",
+    "test:db:simple": "tsx src/test-db-simple.ts",
+    "test:setup": "tsx src/test-setup.ts",
+    "lint": "eslint 'src/**/*.ts'",
+    "format": "prettier --write 'src/**/*.{ts,js,json}'"
   },
-  "pre-commit": [
-    "ts.check",
-    "build",
-    "add-build"
-  ],
   "type": "module",
   "keywords": [],
   "author": "",
@@ -34,8 +32,6 @@
     "lodash": "^4.17.21",
     "mysql2": "^3.14.3",
     "node-cache": "^5.1.2",
-    "pre-commit": "^1.2.2",
-    "rimraf": "^6.0.1",
     "sequelize": "^6.37.7",
     "sequelize-typescript": "^2.1.6",
     "winston": "^3.17.0",

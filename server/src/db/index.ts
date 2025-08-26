@@ -18,6 +18,13 @@ const sequelize = new Sequelize({
     idle: 10000,
   },
   models: [User, UserStock],
+  dialectOptions: {
+    ssl: {
+      require: true,
+      ca: process.env.DB_CERT,
+      rejectUnauthorized: false,
+    },
+  },
 });
 
 export default sequelize;

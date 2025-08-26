@@ -1,11 +1,11 @@
 import { Request, Response, NextFunction } from 'express';
-import { UserStock } from '@/models';
-import { successResponse } from '@/utils/response';
-import { AppError } from '@/middlewares';
-import { getStockDetailsBySymbol } from '@/services/yahooService';
+import { UserStock } from '../models';
+import { successResponse } from '../utils/response';
+import { AppError } from '../middlewares';
+import { getStockDetailsBySymbol } from '../services/yahooService';
 import _ from 'lodash';
 import { Convert } from 'easy-currencies';
-import { GET_MY_STOCKS_KEY, removeCache, setCache } from '@/utils/cache';
+import { GET_MY_STOCKS_KEY, removeCache, setCache } from '../utils/cache';
 
 export const getMyStocks = async (
   req: Request,

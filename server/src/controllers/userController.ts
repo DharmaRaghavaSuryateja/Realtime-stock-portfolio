@@ -1,8 +1,8 @@
 import { Request, Response, NextFunction } from 'express';
 import { Op } from 'sequelize';
-import { User } from '@/models';
-import { successResponse, toUserResponse } from '@/utils/response';
-import { AppError } from '@/middlewares';
+import { User } from '../models';
+import { successResponse, toUserResponse } from '../utils/response';
+import { AppError } from '../middlewares';
 
 export const getMyProfile = async (
   req: Request,

@@ -1,5 +1,5 @@
-import { IUser } from '@/models/User';
-import jwtService from '@/services/jwtService';
+import { IUser } from '../models/User';
+import jwtService from '../services/jwtService';
 import { Response } from 'express';
 
 export interface ApiResponse<T = any> {

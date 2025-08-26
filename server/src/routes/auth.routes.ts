@@ -3,17 +3,17 @@ import {
   loginUser,
   registerUser,
   refreshToken,
-} from '@/controllers/authController';
+} from '../controllers/authController';
 import {
   asyncHandler,
   validateRequest,
   authenticateToken,
-} from '@/middlewares';
+} from '../middlewares';
 import {
   loginUserValidator,
   registerUserValidator,
   refreshTokenValidator,
-} from '@/validators/auth.validator';
+} from '../validators/auth.validator';
 
 const router = Router();
 

@@ -1,14 +1,14 @@
 import { Request, Response, NextFunction } from 'express';
 import bcrypt from 'bcryptjs';
 import { Op } from 'sequelize';
-import { User, UserRole } from '@/models';
+import { User, UserRole } from '../models';
 import {
   generateTokens,
   successResponse,
   toUserResponse,
-} from '@/utils/response';
-import jwtService from '@/services/jwtService';
-import { AppError } from '@/middlewares';
+} from '../utils/response';
+import jwtService from '../services/jwtService';
+import { AppError } from '../middlewares';
 
 export const registerUser = async (
   req: Request,
@@ -23,7 +23,7 @@ export const registerUser = async (
     paranoid: false,
   });
 
-  if (existingUser && !existingUser.deleted) {
+  if (existingUser) {
     return next(new AppError('username or email already exists', 409));
   }
 
@@ -95,7 +95,7 @@ export const refreshToken = async (
     where: { id: decoded.userId },
   });
 
-  if (!user || user.deleted) {
+  if (!user) {
     return next(new AppError('User not found', 404));
   }
 

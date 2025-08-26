@@ -3,13 +3,13 @@ import {
   getMyProfile,
   updateMyProfile,
   deleteMyProfile,
-} from '@/controllers/userController';
+} from '../controllers/userController';
 import {
   asyncHandler,
   authenticateToken,
   validateRequest,
-} from '@/middlewares';
-import { updateProfileValidator } from '@/validators/user.validator';
+} from '../middlewares';
+import { updateProfileValidator } from '../validators/user.validator';
 
 const router = Router();
 

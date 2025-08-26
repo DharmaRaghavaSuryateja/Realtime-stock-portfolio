@@ -1,4 +1,4 @@
-import { AppError } from '@/middlewares';
+import { AppError } from '../middlewares';
 import yahooFinance from 'yahoo-finance2';
 
 export const stockTypes = [

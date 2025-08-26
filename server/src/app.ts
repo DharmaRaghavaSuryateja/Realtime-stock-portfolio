@@ -2,7 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
 import rateLimit from 'express-rate-limit';
-import { globalErrorHandler, notFoundHandler } from '@/middlewares';
+import { globalErrorHandler, notFoundHandler } from './middlewares';
 
 const app = express();
 
@@ -28,7 +28,7 @@ app.get('/api/health', (req, res) => {
 
 export const setupRoutes = async () => {
   try {
-    const routes = await import('@/routes');
+    const routes = await import('./routes');
     app.use('/api', routes.default);
     app.use(notFoundHandler);
     app.use(globalErrorHandler);

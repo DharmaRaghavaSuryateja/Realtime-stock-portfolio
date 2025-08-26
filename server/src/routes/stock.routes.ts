@@ -3,14 +3,14 @@ import {
   getDashboardDisplayStocks,
   getStockInfo,
   searchStocks,
-} from '@/controllers/stockController';
-import { asyncHandler, validateRequest } from '@/middlewares';
+} from '../controllers/stockController';
+import { asyncHandler, validateRequest } from '../middlewares';
 import {
   stockCodeSchema,
   stockQuerySchema,
   stockTypeSchema,
-} from '@/validators/stock.validator';
-import { cacheMiddleware } from '@/utils/cache';
+} from '../validators/stock.validator';
+import { cacheMiddleware } from '../utils/cache';
 
 const router = Router();
 

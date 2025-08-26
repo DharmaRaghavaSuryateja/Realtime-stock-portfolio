@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from 'express';
-import jwtService from '@/services/jwtService';
+import jwtService from '../services/jwtService';
 import { AppError } from './errorHandler';
-import User, { UserRole } from '@/models/User';
+import User, { UserRole } from '../models/User';
 
 declare global {
   namespace Express {

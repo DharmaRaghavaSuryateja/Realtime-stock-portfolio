@@ -3,14 +3,14 @@ import {
   getMyStocks,
   deleteMyStock,
   createMyStock,
-} from '@/controllers/userStockController';
-import { asyncHandler, authenticateToken } from '@/middlewares';
-import { validateRequest } from '@/middlewares/validationMiddleware';
+} from '../controllers/userStockController';
+import { asyncHandler, authenticateToken } from '../middlewares';
+import { validateRequest } from '../middlewares/validationMiddleware';
 import {
   createMyStockValidator,
   stockIdValidator,
-} from '@/validators/user.stock.validator';
-import { GET_MY_STOCKS_KEY, cacheMiddleware } from '@/utils/cache';
+} from '../validators/user.stock.validator';
+import { GET_MY_STOCKS_KEY, cacheMiddleware } from '../utils/cache';
 
 const router = Router();
 

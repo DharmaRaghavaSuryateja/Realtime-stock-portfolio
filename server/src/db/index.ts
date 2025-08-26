@@ -1,7 +1,7 @@
 import { Sequelize } from 'sequelize-typescript';
-import config from '@/config';
-import User from '@/models/User.js';
-import UserStock from '@/models/UserStock.js';
+import config from '../config';
+import User from '../models/User';
+import UserStock from '../models/UserStock';
 
 const sequelize = new Sequelize({
   host: config.database.host,

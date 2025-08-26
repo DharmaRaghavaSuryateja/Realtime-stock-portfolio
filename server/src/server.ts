@@ -1,6 +1,6 @@
-import app, { setupRoutes } from '@/app';
-import config from '@/config';
-import { initializeDatabase } from '@/utils/init-db';
+import app, { setupRoutes } from './app';
+import config from './config';
+import { initializeDatabase } from './utils/init-db';
 
 async function startServer() {
   try {

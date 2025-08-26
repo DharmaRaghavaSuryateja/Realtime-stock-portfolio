@@ -1,13 +1,13 @@
 import { Request, Response, NextFunction } from 'express';
-import { successResponse } from '@/utils/response';
+import { successResponse } from '../utils/response';
 import {
   getStocksList,
   getStockDetailsBySymbol,
   searchStocksByQuery,
   StockType,
   StockInfo,
-} from '@/services/yahooService';
-import { setCache } from '@/utils/cache';
+} from '../services/yahooService';
+import { setCache } from '../utils/cache';
 
 export const getDashboardDisplayStocks = async (
   req: Request,

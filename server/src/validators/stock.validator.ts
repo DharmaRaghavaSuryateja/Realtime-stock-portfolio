@@ -1,4 +1,4 @@
-import { stockTypes } from '@/services/yahooService';
+import { stockTypes } from '../services/yahooService';
 import Joi from 'joi';
 
 export const stockCodeSchema = Joi.object({

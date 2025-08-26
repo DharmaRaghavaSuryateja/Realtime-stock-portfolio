@@ -3,16 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "start": "ts-node src/server.ts",
     "build": "tsc",
-    "start": "node dist/server.js",
-    "dev": "nodemon",
-    "test:db": "tsx src/test-db.ts",
-    "test:db:simple": "tsx src/test-db-simple.ts",
-    "test:setup": "tsx src/test-setup.ts",
-    "lint": "eslint 'src/**/*.ts'",
-    "format": "prettier --write 'src/**/*.{ts,js,json}'"
+    "serve": "node dist/server.js"
   },
-  "type": "module",
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -54,7 +48,6 @@
     "nodemon": "^3.1.10",
     "prettier": "^3.6.2",
     "ts-node": "^10.9.2",
-    "tsx": "^4.20.4",
     "typescript": "^5.9.2"
   }
 }

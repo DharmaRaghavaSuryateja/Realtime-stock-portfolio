@@ -1,5 +1,5 @@
-import config from '@/config';
-import { UserRole } from '@/models';
+import config from '../config';
+import { UserRole } from '../models';
 import jwt from 'jsonwebtoken';
 
 interface AccessTokenPayload {

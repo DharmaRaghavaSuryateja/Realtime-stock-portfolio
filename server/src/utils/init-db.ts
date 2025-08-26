@@ -1,5 +1,5 @@
-import sequelize from '@/db';
-import config from '@/config';
+import sequelize from '../db';
+import config from '../config';
 import mysql from 'mysql2/promise';
 
 export async function initializeDatabase() {

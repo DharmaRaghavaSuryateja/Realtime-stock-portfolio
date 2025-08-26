@@ -77,9 +77,6 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       const response = await apiClient.getProfile()
       setUser(response.data.data.user)
     } catch (error: any) {
-      if (error.response?.status === 401) {
-        throw error
-      }
       console.error('Error refreshing user profile:', error)
       throw error
     }

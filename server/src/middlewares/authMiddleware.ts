@@ -44,7 +44,7 @@ export const authenticateToken = async (
       req.user = decoded;
       next();
     } catch {
-      return next(new AppError('Invalid or expired access token', 403));
+      return next(new AppError('Invalid or expired access token', 401));
     }
   } catch {
     return next(new AppError('Authentication error', 500));

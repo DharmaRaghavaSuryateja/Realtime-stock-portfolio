@@ -39,7 +39,7 @@ export const globalErrorHandler = (
   }
 
   if (err.name === 'TokenExpiredError') {
-    return errorResponse(res, 'Token expired', 401);
+    return errorResponse(res, 'Token expired', 403);
   }
 
   return errorResponse(res, error.message, error.statusCode, error.metadata);

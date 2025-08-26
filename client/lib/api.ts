@@ -66,7 +66,7 @@ class ApiClient {
       async (error) => {
         const originalRequest = error.config
 
-        if ((error.response?.status === 401 || error.response?.status === 403) && !originalRequest._retry) {
+        if ((error.response?.status === 403) && !originalRequest._retry) {
           if (this.isRefreshing) {
             return new Promise((resolve, reject) => {
               this.failedQueue.push({ resolve, reject })
